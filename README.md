@@ -98,8 +98,6 @@ Each verdict carries severity (fatal / moderate / minor), a citation, and a conc
 - **Code (`scripts/`):** MIT.
 - See [`NOTICE.md`](NOTICE.md) for full attribution.
 
-This is an unofficial, non-commercial community project. It is not affiliated with the Kaiserreich development team or Paradox Interactive. *Kaiserreich* and its setting belong to their respective creators.
-
 ## Repository topics (for discoverability)
 
 `claude-skill` · `claude-code` · `anthropic` · `kaiserreich` · `alternate-history` · `lore` · `fact-checking` · `hearts-of-iron`
