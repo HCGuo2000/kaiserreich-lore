@@ -1,0 +1,22 @@
+{
+  "name": "kaiserreich-lore",
+  "owner": {
+    "name": "hcguo"
+  },
+  "plugins": [
+    {
+      "name": "kaiserreich-lore",
+      "source": "./",
+      "description": "Kaiserreich (Hearts of Iron IV) lore knowledge base and fact-checking skill: answers questions about the KR timeline, nations, ideologies, leaders and events, and fact-checks fiction against canon with graded verdicts and citations.",
+      "category": "content",
+      "license": "CC-BY-SA-4.0",
+      "keywords": [
+        "kaiserreich",
+        "alternate-history",
+        "lore",
+        "fact-checking",
+        "hearts-of-iron"
+      ]
+    }
+  ]
+}

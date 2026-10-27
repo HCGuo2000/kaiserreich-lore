@@ -1,0 +1,9 @@
+{
+  "name": "kaiserreich-lore",
+  "description": "Kaiserreich (Hearts of Iron IV) lore knowledge base and fact-checking skill, built from the official Kaiserreich Wiki.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hcguo"
+  },
+  "license": "CC-BY-SA-4.0"
+}
