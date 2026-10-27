@@ -10,6 +10,8 @@ Ask it about the KR timeline, nations, ideologies, leaders or terminology — or
 
 > **Content language:** Simplified Chinese (the knowledge base and outputs are in Chinese). Every proper noun keeps its English original, so English queries work too.
 
+**中文简介**：Kaiserreich（《钢铁雄心 IV》架空历史 mod）的离线考据库与文本核查技能——16 册、约 50 万字符的中文知识库，既能回答世界线问题，也能对 KR 背景的小说、同人文逐条做设定核查。中文用法详见文末「中文说明」。
+
 ---
 
 ## What's inside
@@ -51,14 +53,14 @@ python scripts/kr_lookup.py --read 15       # read a volume (with --limit N)
 **Claude Code (as a plugin)**
 
 ```
-/plugin marketplace add <your-github-owner>/kaiserreich-lore
+/plugin marketplace add HCGuo2000/kaiserreich-lore
 /plugin install kaiserreich-lore@kaiserreich-lore
 ```
 
 **Manual (any agent that supports SKILL.md)**
 
 ```bash
-git clone https://github.com/<your-github-owner>/kaiserreich-lore.git
+git clone https://github.com/HCGuo2000/kaiserreich-lore.git
 cp -r kaiserreich-lore ~/.claude/skills/kaiserreich-lore      # Claude Code
 cp -r kaiserreich-lore ~/.workbuddy/skills/kaiserreich-lore   # WorkBuddy
 ```
@@ -97,6 +99,79 @@ Each verdict carries severity (fatal / moderate / minor), a citation, and a conc
 - **Knowledge base text:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Derived from the [Kaiserreich Wiki](https://kaiserreich.wiki/), whose text is licensed CC BY-SA 3.0 — the Chinese translation and restructuring here is shared under the same terms.
 - **Code (`scripts/`):** MIT.
 - See [`NOTICE.md`](NOTICE.md) for full attribution.
+
+---
+
+## 中文说明
+
+### 这是什么
+
+Kaiserreich（*Kaiserreich: Legacy of the Weltkrieg*，《钢铁雄心 IV》架空历史 mod）的**离线考据库 + 事实核查技能**。数据取自 [官方 wiki](https://kaiserreich.wiki/)（快照 2026-10-25，对应 KR4 1.7「Crossroads of Civilisation」），共 **16 册、约 50 万字符**。
+
+它管两件事：
+
+1. **答疑**——各国政体、执政者、意识形态、历史事件、人物命运、术语译名，凡世界线里的「是什么、为什么」，皆附出处。
+2. **核校**——把一篇 KR 背景的小说、同人或剧本拆成可判定的断言，逐条比对 canon，给出裁定与改写建议。
+
+**内容语言为简体中文**；专有名词一律保留英文原名，故英文提问同样可用。
+
+### 安装
+
+**Claude Code（插件方式）**
+
+```
+/plugin marketplace add HCGuo2000/kaiserreich-lore
+/plugin install kaiserreich-lore@kaiserreich-lore
+```
+
+**手动安装（任何支持 SKILL.md 的 agent）**
+
+```bash
+git clone https://github.com/HCGuo2000/kaiserreich-lore.git
+cp -r kaiserreich-lore ~/.claude/skills/kaiserreich-lore      # Claude Code
+cp -r kaiserreich-lore ~/.workbuddy/skills/kaiserreich-lore   # WorkBuddy
+```
+
+### 检索
+
+```bash
+python scripts/kr_lookup.py 宣统 Xuantong   # 全文检索（中英混合，多词 OR）
+python scripts/kr_lookup.py --list          # 列出全部册子
+python scripts/kr_lookup.py --toc 04        # 查看某册目录
+python scripts/kr_lookup.py --read 15       # 读取某册（配 --limit N）
+```
+
+关键词宜**中英双查**：`宣统`／`Xuantong`、`萨温科夫`／`Savinkov`、`帝国公约`／`Reichspakt`。
+
+### 示例问法
+
+- 德国在 1936 年的政体、执政者与中欧体系是怎样的？
+- 中欧（Mitteleuropa）到底怎么运作？哪些国家在帝国公约里？
+- 列宁、托洛茨基、罗斯福在 KR 世界线中的命运，与真实历史有何不同？
+- 我写了一篇 1937 年柏林背景的小说，帮我核查设定有没有硬伤。
+
+### 核查如何裁定
+
+| 裁定 | 含义 |
+|---|---|
+| ✅ **符合设定** | 与 wiki 明文一致 |
+| 🟡 **无据待考** | wiki 未载，但未与设定冲突——**不算错**，属创作自由 |
+| 🟠 **设定冲突** | 与明文 canon 矛盾（政体、人物、时间、归属） |
+| 🔴 **时代错置** | 该时间线尚不存在或已不存在的器物、制度、术语 |
+| 🔴 **张冠李戴** | 真实人物的身份、命运或立场被套错 |
+| ⛔ **OTL 污染** | 直接套用真实历史框架（纳粹德国、苏联、维希法国等） |
+
+每条裁定另标影响等级（致命／中度／轻微），并附依据出处与可直接替换的改写建议。判据细则见 `references/15-factcheck-standards.md`。
+
+> 提醒：KR 大量改写了真实人物的生卒与立场——列宁 1918 年遇刺身亡、托洛茨基 1920 年战死莫斯科、罗斯福 1921 年病故、墨索里尼当上工团意大利总理、斯大林在巴塔哥尼亚带兵。直接套用真实生平是最高频的错误来源。
+
+### 许可
+
+- **知识库文本**：CC BY-SA 4.0（源自 Kaiserreich Wiki 的 CC BY-SA 3.0 文本，中译改写按同协议共享）。
+- **脚本代码**（`scripts/`）：MIT。
+- 本项目不授予商业使用权，详见 [`NOTICE.md`](NOTICE.md)。
+
+---
 
 ## Repository topics (for discoverability)
 
