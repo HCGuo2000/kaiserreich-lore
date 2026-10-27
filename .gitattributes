@@ -1,0 +1,12 @@
+# Normalize line endings to LF in the repository, so SKILL.md and the
+# references read identically on Windows, macOS and Linux.
+* text=auto eol=lf
+
+*.md   text eol=lf
+*.json text eol=lf
+*.py   text eol=lf
+*.txt  text eol=lf
+
+*.png  binary
+*.jpg  binary
+*.ico  binary
