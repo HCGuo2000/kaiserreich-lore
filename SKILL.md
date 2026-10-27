@@ -111,4 +111,5 @@ python scripts/kr_lookup.py --file               # 数据源与快照信息
 - **知识库文本**：依 **CC BY-SA 4.0** 发布。源为 [Kaiserreich Wiki](https://kaiserreich.wiki/)，其内容依 **CC BY-SA 3.0** 授权；本库为其中文摘译与结构化改写，按相同方式共享。
 - **脚本代码**（`scripts/`）：**MIT**。
 - **非官方声明**：本 skill 为社区非商业项目，与 Kaiserreich 开发团队、Paradox Interactive 均无隶属关系。*Kaiserreich* 及其设定归其创作者所有。
+- **禁止商用**：wiki 的 CC 许可仅覆盖其**文字**，不覆盖 Kaiserreich 设定本体；本项目未获授权、亦无权授予任何商业使用权，请勿售卖、捆绑进付费产品或用于收费服务。
 - 详细署名见仓库 `NOTICE.md`。

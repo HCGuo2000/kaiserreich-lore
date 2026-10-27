@@ -1,5 +1,9 @@
 # kaiserreich-lore
 
+> **⚠️ Unofficial · Non-commercial · Not affiliated.**
+> This is a community fan project. It is **not** affiliated with, endorsed by, or sponsored by the Kaiserreich development team, the Kaiserreich Wiki, or Paradox Interactive. *Kaiserreich: Legacy of the Weltkrieg* and its setting belong to their respective creators; *Hearts of Iron IV* is a trademark of Paradox Interactive.
+> **Do not use this skill or its knowledge base for commercial purposes.** The Kaiserreich Wiki's CC BY-SA license covers the wiki's *text* only — it does not grant any rights to the underlying Kaiserreich setting, which this project has no authority to license for commercial use.
+
 An offline **Kaiserreich lore knowledge base + fact-checking skill** for AI agents, built from the official [Kaiserreich Wiki](https://kaiserreich.wiki/).
 
 Ask it about the KR timeline, nations, ideologies, leaders or terminology — or hand it a story set in Kaiserreich and have it fact-checked against canon with graded verdicts, citations and rewrite suggestions.
